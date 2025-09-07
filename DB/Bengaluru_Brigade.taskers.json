@@ -1,0 +1,139 @@
+[{
+  "_id": {
+    "$oid": "660000000000000000000001"
+  },
+  "taskerName": "Suresh Plumbing",
+  "skills": [
+    "Plumbing",
+    "Pipe Fitting"
+  ],
+  "area": "Jayanagar",
+  "rating": 4.7,
+  "hourlyRate": 500
+},
+{
+  "_id": {
+    "$oid": "660000000000000000000002"
+  },
+  "taskerName": "Manish Electrician",
+  "skills": [
+    "Electrician",
+    "Fan Installation",
+    "Wiring"
+  ],
+  "area": "Indiranagar",
+  "rating": 4.8,
+  "hourlyRate": 550
+},
+{
+  "_id": {
+    "$oid": "660000000000000000000003"
+  },
+  "taskerName": "Divya Carpentry",
+  "skills": [
+    "Carpentry",
+    "Furniture Assembly",
+    "Wood Repair"
+  ],
+  "area": "Koramangala",
+  "rating": 4.6,
+  "hourlyRate": 400
+},
+{
+  "_id": {
+    "$oid": "660000000000000000000004"
+  },
+  "taskerName": "Ramesh AC Service",
+  "skills": [
+    "AC Repair",
+    "Fridge Repair",
+    "Appliance Service"
+  ],
+  "area": "Whitefield",
+  "rating": 4.5,
+  "hourlyRate": 600
+},
+{
+  "_id": {
+    "$oid": "660000000000000000000005"
+  },
+  "taskerName": "Anita Home Cleaning",
+  "skills": [
+    "Cleaning",
+    "Laundry",
+    "Deep Cleaning"
+  ],
+  "area": "Malleshwaram",
+  "rating": 4.9,
+  "hourlyRate": 350
+},
+{
+  "_id": {
+    "$oid": "660000000000000000000006"
+  },
+  "taskerName": "Rahul Painter",
+  "skills": [
+    "Painting",
+    "Wall Design",
+    "Polishing"
+  ],
+  "area": "HSR Layout",
+  "rating": 4.7,
+  "hourlyRate": 450
+},
+{
+  "_id": {
+    "$oid": "660000000000000000000007"
+  },
+  "taskerName": "Karthik Tiling Works",
+  "skills": [
+    "Tiling",
+    "Floor Repair",
+    "Bathroom Renovation"
+  ],
+  "area": "Banashankari",
+  "rating": 4.4,
+  "hourlyRate": 480
+},
+{
+  "_id": {
+    "$oid": "660000000000000000000008"
+  },
+  "taskerName": "Mohan Water Tank Service",
+  "skills": [
+    "Plumbing",
+    "Tank Cleaning",
+    "Pump Installation"
+  ],
+  "area": "BTM Layout",
+  "rating": 4.6,
+  "hourlyRate": 520
+},
+{
+  "_id": {
+    "$oid": "660000000000000000000009"
+  },
+  "taskerName": "Lakshmi Cooking Gas Repairs",
+  "skills": [
+    "Gas Stove Repair",
+    "Pipe Fixing",
+    "Kitchen Maintenance"
+  ],
+  "area": "Rajajinagar",
+  "rating": 4.3,
+  "hourlyRate": 400
+},
+{
+  "_id": {
+    "$oid": "660000000000000000000010"
+  },
+  "taskerName": "Arjun IT Fixer",
+  "skills": [
+    "Computer Repair",
+    "Networking",
+    "CCTV Setup"
+  ],
+  "area": "Electronic City",
+  "rating": 4.8,
+  "hourlyRate": 700
+}]

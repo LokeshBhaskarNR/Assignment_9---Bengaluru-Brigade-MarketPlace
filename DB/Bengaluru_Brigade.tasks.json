@@ -1,0 +1,103 @@
+[{
+  "_id": {
+    "$oid": "670000000000000000000001"
+  },
+  "title": "Fix Leaky Kitchen Sink",
+  "description": "Kitchen sink leaking from the trap — needs replacement of washers and reseal.",
+  "postedBy": {
+    "$oid": "650000000000000000000001"
+  },
+  "assignedTo": {
+    "$oid": "660000000000000000000001"
+  },
+  "category": "Plumbing",
+  "status": "Completed",
+  "cost": 1200,
+  "completionDate": {
+    "$date": "2025-09-07T14:42:53.858Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "670000000000000000000002"
+  },
+  "title": "Install Ceiling Fan",
+  "description": "Replace old fan and install new ceiling fan in living room.",
+  "postedBy": {
+    "$oid": "650000000000000000000002"
+  },
+  "assignedTo": {
+    "$oid": "660000000000000000000002"
+  },
+  "category": "Electrician",
+  "status": "Completed",
+  "cost": 900,
+  "completionDate": {
+    "$date": "2025-08-20T10:30:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "670000000000000000000003"
+  },
+  "title": "Bathroom Tile Repair",
+  "description": "Cracked tile near shower—replace two tiles and re-grout.",
+  "postedBy": {
+    "$oid": "650000000000000000000003"
+  },
+  "assignedTo": null,
+  "category": "Tiling",
+  "status": "Open",
+  "cost": 600
+},
+{
+  "_id": {
+    "$oid": "670000000000000000000004"
+  },
+  "title": "Wardrobe Door Fix",
+  "description": "Loose hinges on wardrobe doors; needs re-screwing and hinge replacement.",
+  "postedBy": {
+    "$oid": "650000000000000000000004"
+  },
+  "assignedTo": {
+    "$oid": "660000000000000000000003"
+  },
+  "category": "Carpentry",
+  "status": "Completed",
+  "cost": 1500,
+  "completionDate": {
+    "$date": "2025-07-15T16:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "670000000000000000000005"
+  },
+  "title": "Full House Cleaning",
+  "description": "Deep cleaning of 2BHK apartment after housewarming ceremony.",
+  "postedBy": {
+    "$oid": "650000000000000000000005"
+  },
+  "assignedTo": {
+    "$oid": "660000000000000000000005"
+  },
+  "category": "Cleaning",
+  "status": "Assigned",
+  "cost": 2000
+},
+{
+  "_id": {
+    "$oid": "670000000000000000000006"
+  },
+  "title": "Living Room Painting",
+  "description": "Repaint living room with pastel colors before festival.",
+  "postedBy": {
+    "$oid": "650000000000000000000006"
+  },
+  "assignedTo": {
+    "$oid": "660000000000000000000006"
+  },
+  "category": "Painting",
+  "status": "Open",
+  "cost": 2500
+}]

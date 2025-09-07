@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "650000000000000000000001"
+  },
+  "userName": "Lokesh B",
+  "joinDate": {
+    "$date": "2024-10-15T09:00:00.000Z"
+  },
+  "city": "Bengaluru"
+},
+{
+  "_id": {
+    "$oid": "650000000000000000000002"
+  },
+  "userName": "Pranav",
+  "joinDate": {
+    "$date": "2025-01-05T14:20:00.000Z"
+  },
+  "city": "Bengaluru"
+},
+{
+  "_id": {
+    "$oid": "650000000000000000000003"
+  },
+  "userName": "Isiri",
+  "joinDate": {
+    "$date": "2025-05-20T18:30:00.000Z"
+  },
+  "city": "Bengaluru"
+},
+{
+  "_id": {
+    "$oid": "650000000000000000000004"
+  },
+  "userName": "Manisha",
+  "joinDate": {
+    "$date": "2024-12-01T08:45:00.000Z"
+  },
+  "city": "Bengaluru"
+},
+{
+  "_id": {
+    "$oid": "650000000000000000000005"
+  },
+  "userName": "Fatima",
+  "joinDate": {
+    "$date": "2024-12-01T08:45:00.000Z"
+  },
+  "city": "Bengaluru"
+},
+{
+  "_id": {
+    "$oid": "650000000000000000000006"
+  },
+  "userName": "Shruthi",
+  "joinDate": {
+    "$date": "2024-12-01T08:45:00.000Z"
+  },
+  "city": "Bengaluru"
+}]
