@@ -1,0 +1,205 @@
+
+>_MONGOSH
+
+ 
+ 
+show collections
+taskers
+tasks
+users
+ 
+ 
+ 
+// insertion into users
+ 
+db.users.insertMany([
+  {
+    _id: ObjectId("650000000000000000000001"),
+    userName: "Lokesh B",
+    joinDate: ISODate("2024-10-15T09:00:00Z"),
+    city: "Bengaluru"
+  },
+  {
+    _id: ObjectId("650000000000000000000002"),
+    userName: "Pranav",
+    joinDate: ISODate("2025-01-05T14:20:00Z"),
+    city: "Bengaluru"
+  },
+  {
+    _id: ObjectId("650000000000000000000003"),
+    userName: "Isiri",
+    joinDate: ISODate("2025-05-20T18:30:00Z"),
+    city: "Bengaluru"
+  },
+  {
+    _id: ObjectId("650000000000000000000004"),
+    userName: "Manisha",
+    joinDate: ISODate("2024-12-01T08:45:00Z"),
+    city: "Bengaluru"
+  },
+  {
+    _id: ObjectId("650000000000000000000005"),
+    userName: "Fatima",
+    joinDate: ISODate("2024-12-01T08:45:00Z"),
+    city: "Bengaluru"
+  },
+  {
+    _id: ObjectId("650000000000000000000006"),
+    userName: "Shruthi",
+    joinDate: ISODate("2024-12-01T08:45:00Z"),
+    city: "Bengaluru"
+  }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('650000000000000000000001'),
+    '1': ObjectId('650000000000000000000002'),
+    '2': ObjectId('650000000000000000000003'),
+    '3': ObjectId('650000000000000000000004'),
+    '4': ObjectId('650000000000000000000005'),
+    '5': ObjectId('650000000000000000000006')
+  }
+}
+ 
+ 
+ 
+// insertion into taskers
+ 
+db.taskers.insertMany([
+  {
+    taskerName: "Mukesh Plumbing",
+    skills: ["Plumbing", "Tiling"],
+    area: "Jayanagar",
+    rating: 4.7,
+    hourlyRate: 500
+  },
+  {
+    taskerName: "Mohan Electric",
+    skills: ["Electrician", "Home Wiring", "Appliance Repair"],
+    area: "Indiranagar",
+    rating: 4.8,
+    hourlyRate: 600
+  },
+  {
+    taskerName: "Crazy Carpenters",
+    skills: ["Painting", "Carpentry", "Plumbing"],
+    area: "Koramangala",
+    rating: 4.5,
+    hourlyRate: 450
+  },
+  {
+    taskerName: "Whitefield Fixers",
+    skills: ["Plumbing", "Electrician"],
+    area: "Whitefield",
+    rating: 4.6,
+    hourlyRate: 480
+  },
+  {
+    taskerName: "Safety Home Services",
+    skills: ["Cleaning", "Cooking", "Laundry"],
+    area: "Malleshwaram",
+    rating: 4.9,
+    hourlyRate: 400
+  },
+  {
+    taskerName: "Rahul Painter",
+    skills: ["Painting", "Wall Repair"],
+    area: "HSR Layout",
+    rating: 4.3,
+    hourlyRate: 350
+  }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('68bd8e94dc5f66977379f761'),
+    '1': ObjectId('68bd8e94dc5f66977379f762'),
+    '2': ObjectId('68bd8e94dc5f66977379f763'),
+    '3': ObjectId('68bd8e94dc5f66977379f764'),
+    '4': ObjectId('68bd8e94dc5f66977379f765'),
+    '5': ObjectId('68bd8e94dc5f66977379f766')
+  }
+}
+ 
+ 
+// insertion into tasks
+ 
+db.tasks.insertMany([
+  {
+    _id: ObjectId("670000000000000000000001"),
+    title: "Fix Leaky Kitchen Sink",
+    description: "Kitchen sink leaking from the trap — needs replacement of washers and reseal.",
+    postedBy: ObjectId("650000000000000000000001"), // Asha
+    assignedTo: ObjectId("660000000000000000000001"), // Suresh
+    category: "Plumbing",
+    status: "Assigned",
+    cost: 1200
+  },
+  {
+    _id: ObjectId("670000000000000000000002"),
+    title: "Install Ceiling Fan",
+    description: "Replace old fan and install new ceiling fan in living room.",
+    postedBy: ObjectId("650000000000000000000002"), // Vikram
+    assignedTo: ObjectId("660000000000000000000002"), // Manish
+    category: "Electrician",
+    status: "Completed",
+    cost: 900,
+    completionDate: ISODate("2025-08-20T10:30:00Z")
+  },
+  {
+    _id: ObjectId("670000000000000000000003"),
+    title: "Bathroom Tile Repair",
+    description: "Cracked tile near shower—replace two tiles and re-grout.",
+    postedBy: ObjectId("650000000000000000000003"), // Neha
+    assignedTo: null,
+    category: "Tiling",
+    status: "Open",
+    cost: 600
+  },
+  {
+    _id: ObjectId("670000000000000000000004"),
+    title: "Wardrobe Door Fix",
+    description: "Loose hinges on wardrobe doors; needs re-screwing and hinge replacement.",
+    postedBy: ObjectId("650000000000000000000004"), // Ravi
+    assignedTo: ObjectId("660000000000000000000003"), // Divya
+    category: "Carpentry",
+    status: "Completed",
+    cost: 1500,
+    completionDate: ISODate("2025-07-15T16:00:00Z")
+  },
+  {
+    _id: ObjectId("670000000000000000000005"),
+    title: "Full House Cleaning",
+    description: "Deep cleaning of 2BHK apartment after housewarming ceremony.",
+    postedBy: ObjectId("650000000000000000000005"), // Fatima
+    assignedTo: ObjectId("660000000000000000000005"), // Anita Home Services
+    category: "Cleaning",
+    status: "Assigned",
+    cost: 2000
+  },
+  {
+    _id: ObjectId("670000000000000000000006"),
+    title: "Living Room Painting",
+    description: "Repaint living room with pastel colors before festival.",
+    postedBy: ObjectId("650000000000000000000006"), // Shruthi
+    assignedTo: ObjectId("660000000000000000000006"), // Rahul Painter
+    category: "Painting",
+    status: "Open",
+    cost: 2500
+  }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('670000000000000000000001'),
+    '1': ObjectId('670000000000000000000002'),
+    '2': ObjectId('670000000000000000000003'),
+    '3': ObjectId('670000000000000000000004'),
+    '4': ObjectId('670000000000000000000005'),
+    '5': ObjectId('670000000000000000000006')
+  }
+}
+ 
+ 
+

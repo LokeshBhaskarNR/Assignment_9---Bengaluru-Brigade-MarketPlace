@@ -1,0 +1,50 @@
+
+>_MONGOSH
+
+use Bengaluru_Brigade
+switched to db Bengaluru_Brigade
+ 
+ 
+ 
+// query 1 - A user in "Jayanagar" needs a plumber. Find all taskers who have "Plumbing" in their skills array and area: "Jayanagar"
+ 
+db.taskers.find(
+  { skills: "Plumbing", area: "Jayanagar" },
+  { _id: 1, taskerName: 1, skills: 1, area: 1, rating: 1, hourlyRate: 1 }
+).pretty();
+{
+  _id: ObjectId('68bd8e94dc5f66977379f761'),
+  taskerName: 'Mukesh Plumbing',
+  skills: [
+    'Plumbing',
+    'Tiling'
+  ],
+  area: 'Jayanagar',
+  rating: 4.7,
+  hourlyRate: 500
+}
+ 
+ 
+ 
+// query 2 - update the status of taskers 
+ 
+db.tasks.findOneAndUpdate(
+  { status: "Assigned" },
+  { $set: { status: "Completed", completionDate: new Date() } },
+  { returnDocument: "after" } 
+);
+{
+  _id: ObjectId('670000000000000000000001'),
+  title: 'Fix Leaky Kitchen Sink',
+  description: 'Kitchen sink leaking from the trap — needs replacement of washers and reseal.',
+  postedBy: ObjectId('650000000000000000000001'),
+  assignedTo: ObjectId('660000000000000000000001'),
+  category: 'Plumbing',
+  status: 'Completed',
+  cost: 1200,
+  completionDate: 2025-09-07T14:42:53.858Z
+}
+ 
+ 
+Bengaluru_Brigade
+

@@ -1,0 +1,76 @@
+AGGREGATION QUERY : 
+
+db.getCollection('taskers').aggregate(
+  [
+    {
+      $lookup: {
+        from: 'tasks',
+        localField: '_id',
+        foreignField: 'assignedTo',
+        as: 'joinedTasks'
+      }
+    },
+    { $unwind: { path: '$joinedTasks' } },
+    {
+      $match: {
+        'joinedTasks.status': 'Completed'
+      }
+    },
+    {
+      $group: {
+        _id: '$_id',
+        taskerName: { $first: '$taskerName' },
+        avgRating: { $avg: '$rating' },
+        totalEarnings: {
+          $sum: '$joinedTasks.cost'
+        },
+        completedTaskCount: { $sum: 1 }
+      }
+    },
+    {
+      $sort: { avgRating: -1, totalEarnings: -1 }
+    },
+    { $limit: 3 },
+    {
+      $project: {
+        _id: 0,
+        taskerId: '$_id',
+        taskerName: 1,
+        avgRating: { $round: ['$avgRating', 2] },
+        totalEarnings: 1,
+        completedTaskCount: 1
+      }
+    }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
+
+OUTPUT : 
+
+[{
+  "taskerName": "Manish Electrician",
+  "totalEarnings": 900,
+  "completedTaskCount": 1,
+  "taskerId": {
+    "$oid": "660000000000000000000002"
+  },
+  "avgRating": 4.8
+},
+{
+  "taskerName": "Suresh Plumbing",
+  "totalEarnings": 1200,
+  "completedTaskCount": 1,
+  "taskerId": {
+    "$oid": "660000000000000000000001"
+  },
+  "avgRating": 4.7
+},
+{
+  "taskerName": "Divya Carpentry",
+  "totalEarnings": 1500,
+  "completedTaskCount": 1,
+  "taskerId": {
+    "$oid": "660000000000000000000003"
+  },
+  "avgRating": 4.6
+}]
